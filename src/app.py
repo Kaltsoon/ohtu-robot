@@ -51,7 +51,7 @@ def set_value():
     value = request.form.get("value")
     int_value = safe_int(value)
 
-    if int_value:
+    if int_value is not None:
         counter.value = int_value
 
     return redirect_to_counter()
