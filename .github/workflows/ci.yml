@@ -21,7 +21,7 @@ jobs:
       - name: Install ChromeDriver
         uses: nanasess/setup-chromedriver@master
         with:
-          chromedriver-version: '86.0.4240.22'
+          chromedriver-version: '96.0.4664.45'
       - name: Install dependencies
         run: poetry install
       - name: Run e2e tests
