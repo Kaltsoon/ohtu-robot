@@ -7,6 +7,6 @@ Resource  resource.robot
 *** Test Cases ***
 Decrease Counter Value
     Counter Page Should Be Open
-    Counter Value Should Be  0
+    Counter Value Should Be  2
     Click Button  Decrease
     Counter Value Should Be  -1

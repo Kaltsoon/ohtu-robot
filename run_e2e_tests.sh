@@ -11,10 +11,8 @@ done
 # suoritetaan testit
 poetry run robot src/e2e
 
-# pysäytetään flask-palvelin portissa 5000
-function clean_up {
-  kill $(lsof -t -i:5000)
-}
+status=$?
 
-# suoritetaan clean_up-funktio, kun prosessi lopettaa suorituksen
-trap clean_up EXIT
+kill $(lsof -t -i:5000)
+
+exit $status
